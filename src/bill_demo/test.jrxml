@@ -58,7 +58,6 @@
 		<field name="unit" class="java.lang.String"/>
 		<field name="outQuantity" class="java.lang.Float"/>
 		<field name="price" class="java.lang.Float"/>
-		<field name="caculatePrice" class="java.lang.Number"/>
 		<variable name="Variable_1" class="java.lang.String"/>
 	</subDataset>
 	<parameter name="no" class="java.lang.String"/>
