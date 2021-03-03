@@ -68,7 +68,7 @@
 	<parameter name="date" class="java.lang.String"/>
 	<parameter name="saleMan" class="java.lang.String"/>
 	<parameter name="note" class="java.lang.String"/>
-	<parameter name="goodsInOut" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="CollectionBeanParam" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -223,8 +223,8 @@
 					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
 				</reportElement>
 				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
-					<datasetRun subDataset="tableDataset" uuid="fca2ea4e-1505-4640-aa68-00d0972ca887">
-						<dataSourceExpression><![CDATA[$P{goodsInOut}]]></dataSourceExpression>
+					<datasetRun subDataset="tableDataset" uuid="994961ce-7b3e-4e24-a44d-f6d4dcffb5b7">
+						<dataSourceExpression><![CDATA[$P{CollectionBeanParam}]]></dataSourceExpression>
 					</datasetRun>
 					<jr:column width="30" uuid="5d0991ec-1888-40b4-918e-9403cb57bc19">
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>

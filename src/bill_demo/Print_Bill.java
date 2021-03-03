@@ -64,7 +64,7 @@ public class Print_Bill extends javax.swing.JFrame {
 
 		/* Map to hold Jasper report Parameters */
 		Map<String, Object> parameters = new HashMap<String, Object>();
-		parameters.put("goodsInOut", itemsJRBean.cloneDataSource());
+		parameters.put("CollectionBeanParam", itemsJRBean.cloneDataSource());
 		parameters.put("no", "XB2102");
 		parameters.put("companyName", "Công ty ngọn lửa thần");
 		parameters.put("customer", "Trn Quang Đức");
