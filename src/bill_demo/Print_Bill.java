@@ -45,7 +45,6 @@ public class Print_Bill extends javax.swing.JFrame {
         //List<Employee> listItems = new ArrayList<Employee>();
   
         List<GoodsInOut> listItems = new ArrayList<GoodsInOut>();
-        OrderProduct od = new OrderProduct("Bình Gas Gia Đình Xám 12kg", 1, Float.valueOf(250000), Float.valueOf(250000));
         GoodsInOut gio1 = new GoodsInOut("123", "XB-21021", "1", "abc", "123", "abc", Float.valueOf(100),  Float.valueOf(100),  Float.valueOf(100), "unit");
         GoodsInOut gio2 = new GoodsInOut("123", "XB-21021", "1", "abc", "123", "abc", Float.valueOf(100),  Float.valueOf(100),  Float.valueOf(100), "unit");
         GoodsInOut gio3 = new GoodsInOut("123", "XB-21021", "1", "abc", "123", "abc", Float.valueOf(100),  Float.valueOf(100),  Float.valueOf(100), "unit");
@@ -60,13 +59,13 @@ public class Print_Bill extends javax.swing.JFrame {
 
         /* Map to hold Jasper report Parameters */
         Map<String, Object> parameters = new HashMap<String, Object>();
-        parameters.put("CollectionBeanParam", itemsJRBean.cloneDataSource());
+        parameters.put("goodsInOut", itemsJRBean.cloneDataSource());
         parameters.put("no", "XB2102");
-        parameters.put("companyName", "Công ty ngọn lửa thần");
-        parameters.put("customer", "Trần Quang Đức");
+        parameters.put("companyName", "Cng ty ngn la thn");
+        parameters.put("customer", "Trn Quang c");
         parameters.put("truckLicensePlateNumber", "29-A1 01234");
         parameters.put("date", "20/2/2020");
-        parameters.put("driverTruck", "Nguyễn Văn A");
+        parameters.put("driverTruck", "Ngn Vn A");
 
         JasperDesign jasperDesign = JRXmlLoader.load("D:\\ceti\\Bill_Demo\\src\\bill_demo\\test.jrxml");
         /*compiling jrxml with help of JasperReport class*/

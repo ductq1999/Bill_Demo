@@ -30,7 +30,7 @@
 			<rightPen lineWidth="0.5" lineColor="#000000"/>
 		</box>
 	</style>
-	<style name="Table_CH" mode="Opaque" backcolor="#EFEFEF">
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
 		<box>
 			<pen lineWidth="0.5" lineColor="#000000"/>
 			<topPen lineWidth="0.5" lineColor="#000000"/>
@@ -39,7 +39,7 @@
 			<rightPen lineWidth="0.5" lineColor="#000000"/>
 		</box>
 	</style>
-	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+	<style name="Table_CH" mode="Opaque" backcolor="#EFEFEF">
 		<box>
 			<pen lineWidth="0.5" lineColor="#000000"/>
 			<topPen lineWidth="0.5" lineColor="#000000"/>
@@ -59,24 +59,6 @@
 		<field name="outQuantity" class="java.lang.Float"/>
 		<field name="price" class="java.lang.Float"/>
 		<field name="caculatePrice" class="java.lang.Number"/>
-		<variable name="id1" class="java.lang.Integer" resetType="Column" calculation="Count">
-			<variableExpression><![CDATA[$F{id}]]></variableExpression>
-		</variable>
-		<variable name="caculatePrice1" class="java.lang.Number" resetType="Column" calculation="Sum">
-			<variableExpression><![CDATA[$F{caculatePrice}]]></variableExpression>
-		</variable>
-		<variable name="id2" class="java.lang.Integer" resetType="Column" calculation="Count">
-			<variableExpression><![CDATA[$F{id}]]></variableExpression>
-		</variable>
-		<variable name="caculatePrice2" class="java.lang.Number" resetType="Column" calculation="Sum">
-			<variableExpression><![CDATA[$F{caculatePrice}]]></variableExpression>
-		</variable>
-		<variable name="outQuantity1" class="java.lang.Float" resetType="Column" calculation="Sum">
-			<variableExpression><![CDATA[$F{outQuantity}]]></variableExpression>
-		</variable>
-		<variable name="caculatePrice3" class="java.lang.Number" resetType="Column" calculation="Sum">
-			<variableExpression><![CDATA[$F{caculatePrice}]]></variableExpression>
-		</variable>
 	</subDataset>
 	<parameter name="no" class="java.lang.String"/>
 	<parameter name="companyName" class="java.lang.String"/>
@@ -257,12 +239,11 @@
 						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
 						<jr:detailCell style="Table_TD" height="30">
 							<textField>
-								<reportElement x="0" y="0" width="30" height="30" uuid="56a4c934-a8b8-4a30-a7a2-60c64ad7139a"/>
-								<box leftPadding="2"/>
-								<textElement>
-									<font fontName="DejaVu Sans" size="12"/>
+								<reportElement x="0" y="0" width="30" height="30" uuid="68c305db-1a68-41c6-b059-9fd598a38a40"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="13"/>
 								</textElement>
-								<textFieldExpression><![CDATA[$V{id}]]></textFieldExpression>
+								<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
 							</textField>
 						</jr:detailCell>
 					</jr:column>
@@ -335,15 +316,7 @@
 								<text><![CDATA[Số lượng]]></text>
 							</staticText>
 						</jr:columnHeader>
-						<jr:columnFooter style="Table_CH" height="30" rowSpan="1">
-							<textField>
-								<reportElement x="0" y="0" width="60" height="30" uuid="23d20982-feb0-4555-a2be-c32ae801cdc6"/>
-								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font size="13"/>
-								</textElement>
-								<textFieldExpression><![CDATA[$V{outQuantity1}]]></textFieldExpression>
-							</textField>
-						</jr:columnFooter>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
 						<jr:detailCell style="Table_TD" height="30">
 							<textField>
 								<reportElement x="0" y="0" width="60" height="30" uuid="a6f54973-b7b3-4f28-b244-bc0cca39c8f6"/>
@@ -407,15 +380,7 @@
 								<text><![CDATA[Thành tiền]]></text>
 							</staticText>
 						</jr:columnHeader>
-						<jr:columnFooter style="Table_CH" height="30" rowSpan="1">
-							<textField>
-								<reportElement x="0" y="0" width="150" height="30" uuid="64382aee-24c0-4429-90b6-6ca3a72a514f"/>
-								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font size="13"/>
-								</textElement>
-								<textFieldExpression><![CDATA[$V{caculatePrice3}]]></textFieldExpression>
-							</textField>
-						</jr:columnFooter>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
 						<jr:detailCell style="Table_TD" height="30">
 							<textField>
 								<reportElement x="0" y="0" width="150" height="30" uuid="83e7e663-668b-4f45-9601-ba70c2ff257b"/>
